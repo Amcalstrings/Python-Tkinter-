@@ -3,11 +3,12 @@ from tkinter import messagebox
 
 
 # -----------------------------------------------------------------------------------#
+#message box function
 def exit_window():
     if messagebox.askyesno(title="?", message="Do you want to exit?"):
         window.destroy()
 
-
+#the workings of the calculate buttton are defined here
 def calculate():
     a = first_entry.get()
     b = second_entry.get()
@@ -46,10 +47,10 @@ window = Tk()
 window.title("Mini Calculator")
 window.minsize(width=130, height=130)
 window.protocol("WM_DELETE_WINDOW", exit_window)
-
+#leftside input-entry
 first_entry = Entry()
 first_entry.grid(row=2, column=1, columnspan=2)
-
+#right side input-entry
 second_entry = Entry()
 second_entry.grid(row=2, column=4, columnspan=2)
 
